@@ -29,6 +29,4 @@ jobs:
           gh release create "$GITHUB_REF_NAME" \
             "menubar/TheLongRun-${VERSION}.dmg" \
             --title "The Long Run ${GITHUB_REF_NAME}" \
-            --notes "Open the .dmg, drag **TheLongRun** to Applications, then grant **Input Monitoring** + **Accessibility** on first launch.
-
-_This build is self-signed and not notarized — on first open, right-click the app ▸ **Open** to get past Gatekeeper._"
+            --notes "Open the .dmg, drag TheLongRun to Applications, then grant Input Monitoring + Accessibility on first launch. This build is self-signed and not notarized — on first open, right-click the app and choose Open to get past Gatekeeper."
