@@ -4,7 +4,7 @@
 set -e
 cd "$(dirname "$0")"
 
-VERSION="1.1"
+VERSION="${VERSION:-1.1}"        # override via env, e.g. VERSION=1.2 (CI uses the git tag)
 VOL="The Long Run"
 APP="TheLongRun.app"
 DMG="TheLongRun-$VERSION.dmg"

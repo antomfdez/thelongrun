@@ -5,6 +5,7 @@ cd "$(dirname "$0")"
 APP="TheLongRun.app"
 BIN="$APP/Contents/MacOS/TheLongRun"
 RES="$APP/Contents/Resources"
+VERSION="${VERSION:-1.1}"
 # Default to a STABLE self-signed identity so permission grants persist across
 # rebuilds and copies. Override with SIGN_ID=- for a throwaway ad-hoc build.
 if [ -z "${SIGN_ID:-}" ]; then
@@ -34,8 +35,8 @@ cat > "$APP/Contents/Info.plist" <<PLIST
     <key>CFBundleName</key><string>TheLongRun</string>
     <key>CFBundleDisplayName</key><string>The Long Run</string>
     <key>CFBundleIdentifier</key><string>com.thelongrun.menubar</string>
-    <key>CFBundleVersion</key><string>1.1</string>
-    <key>CFBundleShortVersionString</key><string>1.1</string>
+    <key>CFBundleVersion</key><string>${VERSION}</string>
+    <key>CFBundleShortVersionString</key><string>${VERSION}</string>
     <key>CFBundlePackageType</key><string>APPL</string>
     <key>CFBundleExecutable</key><string>TheLongRun</string>
 ${HAS_ICON}
