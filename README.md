@@ -109,6 +109,19 @@ cd menubar
 ./compile_dmg.sh        # → TheLongRun-1.1.dmg
 ```
 
+### Releasing (automatic)
+
+You don't have to build or upload anything by hand. Push a version tag and GitHub Actions
+builds the DMG on a macOS runner and publishes it as a Release (free for public repos):
+
+```sh
+git tag v1.2
+git push origin v1.2
+```
+
+The tag's version flows into the app bundle and the DMG name. Grab the latest build from the
+[Releases page](../../releases).
+
 > The DMG is **self-signed and not notarized**. On your own Mac it just works. On someone
 > else's Mac, Gatekeeper will say "unidentified developer" — they right-click ▸ **Open** once
 > to allow it. (Notarization needs a paid Apple Developer account.)
