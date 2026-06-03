@@ -1,0 +1,12 @@
+# Build artifacts
+/tldrun
+menubar/TheLongRun.app/
+menubar/AppIcon.iconset/
+menubar/AppIcon.icns
+*.dmg
+
+# macOS
+.DS_Store
+
+# Go
+/vendor/
